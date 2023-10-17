@@ -1,6 +1,7 @@
 
 
 const itemEl = document.querySelectorAll("#categories .item");
+// const itemEl = document.querySelectorAll("#categories.item");
 
 console.log(`Number of categories: ${itemEl.length}`);
 // ***************************************************************// 
