@@ -25,18 +25,18 @@ const gallery = images.map((image) =>
   
 const items = document.querySelectorAll('.js-item');
 const image = document.querySelectorAll("img");
-console.log(image);
   
-// list.style.flexDirection = 'column';
 list.style.display = 'flex';
+list.style.display = 'flex';
+list.style.flexWrap = 'wrap';
 list.style.listStyleType = 'none';
 list.style.gap = '30px';
 list.style.paddingRight = "40px";
-// list.style.wrap = 'flexWrap';
+
 image.forEach((img) => {
-  // img.style.maxHeight = '215px';
   img.style.width = '100%';
   img.style.height = 'auto';
+  // img.style.maxHeight = '215px';
   
 });
 items.forEach((item) => {
