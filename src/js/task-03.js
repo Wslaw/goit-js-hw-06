@@ -25,7 +25,7 @@ const gallery = images.map((image) =>
   
 const items = document.querySelectorAll('.js-item');
 const image = document.querySelectorAll("img");
-  
+
 list.style.display = 'flex';
 list.style.display = 'flex';
 list.style.flexWrap = 'wrap';
@@ -33,12 +33,12 @@ list.style.listStyleType = 'none';
 list.style.gap = '30px';
 list.style.paddingRight = "40px";
 
-image.forEach((img) => {
+[...image].map((img) => {
   img.style.width = '100%';
   img.style.height = 'auto';
   // img.style.maxHeight = '215px';
   
 });
-items.forEach((item) => {
+// items.forEach((item) => {
   
-});
+// });
