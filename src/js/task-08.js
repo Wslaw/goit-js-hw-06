@@ -1,20 +1,22 @@
 const input = document.querySelector(".login-form");
 
 input.addEventListener("submit", function (event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    const cloneInput = { input };
-    const dataInput = {};
+  const inputElements = input.elements;
+  const dataInput = {};
 
-    cloneInput.forEach((value, key) => {
-        dataInput[key] = value;
-    });
-
-    if (!dataInput.email || !dataInput.password) {
-        alert("Все поля должны быть заполнены!");
+  for (let i = 0; i < inputElements.length; i += 1) {
+    const element = inputElements[i];
+    if (element.type !== "submit") {
+      if (element.value.trim() === "") {
+        alert("All fields must be fill");
         return;
-    }
+      }
 
-    console.log(dataInput);
-        input.reset();
+      dataInput[element.name] = element.value;
+    }
+  }
+  console.log(dataInput);
+  input.reset();
 });
