@@ -1,15 +1,15 @@
 const input = document.querySelector(".login-form");
 
-input.addEventListener("submit", handleForm);
-
-function handleForm(event) {
+input.addEventListener("submit", function (event) {
     event.preventDefault();
-    const cloneInput = { ...input };
+
+    const cloneInput = { input };
     const dataInput = {};
 
     cloneInput.forEach((value, key) => {
-        (dataInput[key] = value);
+        dataInput[key] = value;
     });
+
     if (!dataInput.email || !dataInput.password) {
         alert("Все поля должны быть заполнены!");
         return;
@@ -17,4 +17,4 @@ function handleForm(event) {
 
     console.log(dataInput);
         input.reset();
-};
+});
