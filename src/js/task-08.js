@@ -1,27 +1,20 @@
 const input = document.querySelector(".login-form");
-const btn = document.querySelector("button")
-let email = "";
-let password = "";
-input.addEventListener("input", handleInput);
-btn.addEventListener("click", handleBtn);
 
-function handleInput(event) {
-   
-    email = event.currentTarget[0].value;
-    password = event.currentTarget[1].value;
+input.addEventListener("submit", handleForm);
 
-    console.dir( email);
-    console.dir(password);
-};
-function handleBtn(event) {
+function handleForm(event) {
     event.preventDefault();
-    if (email && password) {
-        console.log("true");
-    } else {
-        console.log("false");
-    alert("все поля должны быть заполнены");
-    };
-    const resultObjectField = {};
+    const cloneInput = { ...input };
+    const dataInput = {};
 
+    cloneInput.forEach((value, key) => {
+        (dataInput[key] = value);
+    });
+    if (!dataInput.email || !dataInput.password) {
+        alert("Все поля должны быть заполнены!");
+        return;
+    }
 
-}
+    console.log(dataInput);
+        input.reset();
+};
