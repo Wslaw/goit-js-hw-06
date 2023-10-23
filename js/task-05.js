@@ -11,12 +11,4 @@ nameInput.addEventListener("input", () => {
 
     }
 })
-// ***********Variant 1*********************************
-// const nameInput = document.getElementById("name-input");
-// const nameOutput = document.getElementById("name-output");
-
-// nameInput.addEventListener("input", () => {
-//     nameOutput.textContent = nameInput.value.trim() === "" ?
-//         alert("Все поля должны быть заполнены!") : continue;
-// });
 
