@@ -49,9 +49,7 @@ function destroyBoxes() {
       box.remove();
   }
 })
-    
-
-    
+       
    
   }
 
