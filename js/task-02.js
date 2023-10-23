@@ -30,6 +30,16 @@ ingredients.map((ingredient) => {
   console.log(newItemEl);
   newItemEl.textContent = ingredient;
   newItemEl.classList.add("item");
+  newItemEl.style.listStyleType = "none";
+  newItemEl.style.fontSize = "25px";
+  newItemEl.style.fontWeight = "700";
+  newItemEl.style.color = getRandomHexColor();
   arr.push(newItemEl);
 });
 list.append(...arr);
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
