@@ -13,7 +13,7 @@ let amount = 0;
 
 
 function createBoxes(amount) {
-  let arr = [];
+  const arr = [];
   for (let i = 1; i <= amount; i+=1) {
     const el = `<div class = "box"  style ="
         background-color: ${getRandomHexColor()};    
