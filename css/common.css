@@ -8,7 +8,7 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background-color: #787272;
   color: #212121;
   line-height: 1.5;
 }
@@ -21,6 +21,20 @@ input {
 button {
   padding: 8px 12px;
   cursor: pointer;
+}
+/* *********************************** */
+li{
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+a{
+  padding: 5px 10px;
+  border: 1px solid ;
+  border-radius: 10px;
+  background-color: #c7cffa;
+  text-decoration: none;  
+  color: rgb(13, 74, 74);
 }
 
         body {
@@ -38,4 +52,125 @@ button {
             left: 0;
             z-index: -1; /* чтобы видео было за содержимым body */
         }
-   
+  
+.sky{
+  z-index: -1;
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background-color: #1a1717;
+animation: sky 500s infinite linear alternate;
+}
+
+.earth {
+  z-index: -1;
+position: fixed;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+object-fit: contain;
+padding: 3.125rem;
+animation: earth 100s infinite linear alternate;
+}
+
+.star{
+ will-change: transform;
+ width: 0.0875rem; 
+ height: 0.0875rem;
+ border-radius: 50%;
+background-color: #FFF;
+}
+
+.star--type-0{
+  animation: 
+  star-0 5s infinite ease alternate,
+  opacity 2s infinite linear alternate,
+  color 30s infinite ease alternate;
+}
+.star--type-1{
+  animation: 
+  star-1 8s infinite ease alternate-reverse,
+  opacity 2s infinite linear alternate-reverse,
+  color 30s infinite ease alternate-reverse;
+}
+
+.star--type-2{
+  animation: 
+  star-2 12s infinite ease alternate,
+  opacity 4s infinite linear alternate,
+  color 20s infinite ease alternate;
+}
+
+@keyframes earth {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+
+
+@keyframes star-0{
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0.8);
+  }
+}
+@keyframes star-1{
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0.2);
+  }
+}
+@keyframes star-2{
+  0%{
+    transform: scale(0.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+@keyframes color {
+  0%{
+    background-color: #fff;
+  }
+  25%{
+    background-color: #f8baba;
+  }
+  50%{
+    background-color: #f0fabd;
+  }
+  75%{
+    background-color: #c7cffa;
+  }
+}
+
+@keyframes opacity {
+  0%{
+    opacity: 0.5;
+  }
+  8%{
+    opacity: 0.9;
+  }
+  100%{
+    opacity: 0.5;
+  }
+}
+
+@keyframes sky {
+0% {
+  transform: scale(1);
+}
+100% {
+  transform: scale(3);
+}
+}
